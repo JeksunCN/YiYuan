@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.example</groupId>
+  <artifactId>YiYuanDemo</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>war</packaging>
+
+  <name>YiYuanDemo Maven Webapp</name>
+  <!-- FIXME change it to the project's website -->
+  <url>http://www.example.com</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+
+    <mybatis.version>3.5.1</mybatis.version>
+    <mybatis-spring.version>2.0.3</mybatis-spring.version>
+    <jdbc.driver.version>8.0.19</jdbc.driver.version>
+
+    <spring.version>5.2.2.RELEASE</spring.version>
+    <commons.dbcp.version>1.4</commons.dbcp.version>
+    <commons.io.version>2.4</commons.io.version>
+    <commons.fileupload.version>1.2.2</commons.fileupload.version>
+    <commons.pool.version>1.6</commons.pool.version>
+    <commons.lang.version>2.6</commons.lang.version>
+    <fastjson.version>1.2.13</fastjson.version>
+    <log4j-version>1.2.17</log4j-version>
+    <jboss-logging>3.3.2.Final</jboss-logging>
+    <slf4j-version>1.7.25</slf4j-version>
+
+    <java.version>1.8</java.version>
+    <aspectj.version>1.9.6</aspectj.version>
+    <javax.servlet-api.version>3.1.0</javax.servlet-api.version>
+    <jsp-api.version>2.2</jsp-api.version>
+    <jstl.version>1.2</jstl.version>
+    <maven.test.skip>true</maven.test.skip>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
+
+
+    <!-- Begin: Mybatis依赖 -->
+    <dependency>
+      <groupId>org.mybatis</groupId>
+      <artifactId>mybatis</artifactId>
+      <version>${mybatis.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.mybatis</groupId>
+      <artifactId>mybatis-spring</artifactId>
+      <version>${mybatis-spring.version}</version>
+    </dependency>
+    <!-- End: Mybatis依赖 -->
+
+    <!-- Begin: 数据库依赖包 -->
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>${jdbc.driver.version}</version>
+      <scope>runtime</scope>
+    </dependency>
+    <!-- End: 数据库依赖包 -->
+
+
+
+    <!--Other Moudle-->
+    <!--<dependency>
+      <groupId>cn.ct</groupId>
+      <artifactId>ct-dao</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>-->
+
+    <!-- Begin: spring依赖 -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context-support</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-jdbc</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-tx</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+    <!-- End: spring依赖 -->
+
+    <!-- Begin: Springmvc依赖 -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webmvc</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+    <!-- End: Springmvc依赖 -->
+
+    <!-- Begin: Commons相关依赖包 -->
+    <dependency>
+      <groupId>commons-dbcp</groupId>
+      <artifactId>commons-dbcp</artifactId>
+      <version>${commons.dbcp.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>commons-fileupload</groupId>
+      <artifactId>commons-fileupload</artifactId>
+      <version>${commons.fileupload.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>commons-io</groupId>
+      <artifactId>commons-io</artifactId>
+      <version>${commons.io.version}</version>
+    </dependency>
+    <!-- End: Commons相关依赖包 -->
+    <!--
+    <dependency>
+        <groupId>commons-pool</groupId>
+        <artifactId>commons-pool</artifactId>
+        <version>${commons.pool.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>commons-lang</groupId>
+        <artifactId>commons-lang</artifactId>
+        <version>${commons.lang.version}</version>
+    </dependency>
+    -->
+
+    <!--Fastjson-->
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>fastjson</artifactId>
+      <version>${fastjson.version}</version>
+    </dependency>
+
+    <!--日志-->
+    <dependency>
+      <groupId>log4j</groupId>
+      <artifactId>log4j</artifactId>
+      <version>${log4j-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.jboss.logging</groupId>
+      <artifactId>jboss-logging</artifactId>
+      <version>${jboss-logging}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-log4j12</artifactId>
+      <version>${slf4j-version}</version>
+    </dependency>
+
+
+
+    <!--Other Moudle-->
+    <!--<dependency>
+      <groupId>cn.ct</groupId>
+      <artifactId>ct-service</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>-->
+
+    <!-- Begin: aspectj相关jar包-->
+    <dependency>
+      <groupId>org.aspectj</groupId>
+      <artifactId>aspectjrt</artifactId>
+      <version>${aspectj.version}</version>
+      <scope>runtime</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.aspectj</groupId>
+      <artifactId>aspectjweaver</artifactId>
+      <version>${aspectj.version}</version>
+    </dependency>
+    <!-- End: aspectj相关jar包-->
+
+    <!-- Begin: Servlet相关依赖包 -->
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>${javax.servlet-api.version}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>javax.servlet.jsp</groupId>
+      <artifactId>jsp-api</artifactId>
+      <version>${jsp-api.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>jstl</artifactId>
+      <version>${jstl.version}</version>
+    </dependency>
+    <!-- End: Servlet相关依赖包 -->
+
+  </dependencies>
+
+  <build>
+
+  </build>
+</project>
